@@ -9,7 +9,7 @@ metadata:
 spec:
   interval: 10m 
   approvePlan: auto
-  path: ./base/terraform/azure-config
+  path: ./terraform/azure-config
   sourceRef:
     kind: GitRepository
     name: flux-system 
