@@ -1,16 +1,28 @@
 terraform {
-  required_version = ">= 0.12.26"
+  required_version = ">=1.1.9"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~>3.6"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.4.3"
+    }
+  }
 }
 
-variable "subject" {
-   type = string
-   default = "tfctl-rc"
-   description = "Subject to hello"
+provider "azurerm" {
+  features {
+    key_vault {
+      purge_soft_delete_on_destroy = true
+    }
+  }
 }
 
-output "hello_world" {
-  value = "hey hey ya, ${var.subject}!"
+provider "random" {
 }
+
 
 data "azurerm_resource_group" "example" {
   name     = "argo-1"
