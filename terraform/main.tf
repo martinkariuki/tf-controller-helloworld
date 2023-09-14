@@ -26,7 +26,6 @@ provider "random" {
 
 data "azurerm_resource_group" "example" {
   name     = "argo-1"
-  location = "canadacentral"
 }
 
 resource "azurerm_public_ip" "example" {
