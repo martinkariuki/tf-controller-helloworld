@@ -9,7 +9,7 @@ spec:
   ref:
     branch: main
 ---
-apiVersion: infra.contrib. fluxcd.io/vlalphal
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: Terraform
 metadata:
   name: azure-config 
