@@ -9,21 +9,6 @@ spec:
   ref:
     branch: main
 ---
-apiVersion: infra.contrib.fluxcd.io/v1alpha1
-kind: Terraform
-metadata:
-  name: helloworld-tf
-spec:
-  path: ./terraform
-  approvePlan: ""
-  interval: 1m
-  sourceRef:
-    kind: GitRepository
-    name: helloworld-tf
-  writeOutputsToSecret:
-    name: helloworld-outputs
-
----
 apiVersion: infra.contrib. fluxcd.io/vlalphal
 kind: Terraform
 metadata:
